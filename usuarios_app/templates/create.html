@@ -5,26 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <!-- Fuente Balsamiq -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
     <main>
         <div>
             <h1>Add a New User</h1>
         </div>
-        <form>
-            <div>
-                <label>First Name</label>
-                <input type="text">
+        <form action='/' method="POST">
+            <div class="input-box">
+                <label for="first_name">First Name</label>
+                <input type="text" id = "first_name" name = "first_name">
             </div>
-            <div>
-                <label>Last Name</label>
-                <input type="text">
+            <div class="input-box">
+                <label for="last_name">Last Name</label>
+                <input type="text" id = "last_name" name = "last_name">
             </div>
-            <div>
-                <label>Email</label>
-                <input type="text">
+            <div class="input-box">
+                <label for="email">Email</label>
+                <input type="text" id = "email" name = "email">
             </div>
-            <button>Create</button>
+            <button class="create-btn" type="submit">Create</button>
         </form>
     </main>
 </body>
